@@ -1,0 +1,5 @@
+I used the Yelp Fusion API to iterate through a bunch of Toronto-area restaurants and download their reviews and star ratings as training data for a very simple Naive Bayes classifier to do sentiment analysis into two ’positive’ and ’negative’ classes.
+However, it turns out that Yelp’s Business Search API had a very significant limitation: it only displayed the first sentence or two of each review, truncating the rest with an ellipsis at the end. This was good enough for a simple proof-of-concept, but it obviously hinders a data-hungry model from reaching its peak potential.
+The way Yelp intended the API to be used was for the consumer (i.e, the application developer using the API) to use the included reviews[x].url field to redirect the end-user to a web page containing the rest of the review (so that Yelp can get a few more ad impressions in the process). 
+
+The goal of this assignment, then, is to use any and all of the tools at our disposal (calling endpoints of the REST API, GraphQL, parsing HTML, crawling the rest of the Yelp website) to amass the best training data set for our task that we possibly can.
